@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7e7e7" />
+    <meta name="description" content="A little corner of the world made with love." />
+    <title>Nikhil's Word — Gyanvee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="story-data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="sparkle sparkle-one" aria-hidden="true">✦</div>
+    <div class="sparkle sparkle-two" aria-hidden="true">✧</div>
+    <div class="love-confetti" aria-hidden="true">
+      <span class="love-float love-float-1">♡</span>
+      <span class="love-float love-float-2">♥</span>
+      <span class="love-float love-float-3">✿</span>
+      <span class="love-float love-float-4">♡</span>
+      <span class="love-float love-float-5">♥</span>
+      <span class="love-float love-float-6">❀</span>
+      <span class="love-float love-float-7">♡</span>
+      <span class="love-float love-float-8">♥</span>
+    </div>
+
+    <main id="app">
+      <section class="login-screen" id="login-screen" aria-labelledby="login-title">
+        <div class="login-card glass-card">
+          <div class="login-flower" aria-hidden="true">❀</div>
+          <p class="eyebrow">A little place, just for you</p>
+          <h1 id="login-title">Come on in<span class="heart">♡</span></h1>
+          <p class="login-copy">This tiny world has been waiting for you.</p>
+          <form id="login-form">
+            <label for="username">Your name</label>
+            <input id="username" name="username" type="text" autocomplete="username" placeholder="Enter your username" required />
+            <label for="password">Secret password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required />
+            <p class="login-error" id="login-error" role="alert" aria-live="polite"></p>
+            <button class="button button-primary button-wide" type="submit">Open your little world <span>♡</span></button>
+          </form>
+          <p class="tiny-note">Made with a little bit of magic and a lot of love.</p>
+        </div>
+      </section>
+
+      <section class="home-screen hidden" id="home-screen" aria-labelledby="welcome-title">
+        <header class="topbar">
+          <a class="wordmark" href="#home" data-action="home"><span class="wordmark-icon">♡</span> a little love letter</a>
+          <button class="text-button" data-action="logout" type="button">Close this little world <span>↗</span></button>
+        </header>
+        <div class="home-content">
+          <div class="welcome-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> a place made just for you <span class="eyebrow-line"></span></p>
+            <h1 id="welcome-title">Welcome to<br /><em>Nikhil’s World</em><br /><span class="name-script">Gyanvee</span> <span class="welcome-emoji">🌷✨</span></h1>
+            <p class="welcome-subtitle">A few little memories, a story just for us,<br class="desktop-break" /> and all the love in my heart.</p>
+          </div>
+          <div class="choice-grid">
+            <button class="choice-card story-card" data-action="story" type="button">
+              <span class="choice-icon" aria-hidden="true">📖</span>
+              <span class="choice-copy"><span class="choice-kicker">Turn the first page</span><span class="choice-title">Our story</span><span class="choice-description">A little book about us, one page at a time.</span></span>
+              <span class="choice-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="choice-card album-card" data-action="album" type="button">
+              <span class="choice-icon" aria-hidden="true">🌼</span>
+              <span class="choice-copy"><span class="choice-kicker">Little moments, big feelings</span><span class="choice-title">Our album</span><span class="choice-description">A home for all our favorite memories.</span></span>
+              <span class="choice-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p class="home-footer">“In every lifetime, I’d still find my way to you.” <span>♡</span></p>
+        </div>
+        <div class="home-illustration" aria-hidden="true"><span>✿</span><i>❀</i><b>❋</b></div>
+      </section>
+
+      <section class="album-screen hidden" id="album-screen" aria-labelledby="album-title">
+        <header class="topbar topbar-light">
+          <button class="wordmark wordmark-button" data-action="home" type="button"><span class="wordmark-icon">♡</span> a little love letter</button>
+          <button class="text-button" data-action="home" type="button">← Back home</button>
+        </header>
+        <div class="album-message glass-card">
+          <span class="album-illustration" aria-hidden="true">🌸</span>
+          <p class="eyebrow">A little something is growing</p>
+          <h1 id="album-title">Our album</h1>
+          <p class="album-note">Your Nikhil needs a little more time for this one…</p>
+          <p class="album-subnote">But soon, this will be filled with all our favorite moments.<br />Until then, keep making memories with me. ♡</p>
+          <button class="button button-secondary" data-action="home" type="button">Back to our little world</button>
+        </div>
+      </section>
+
+      <section class="book-screen hidden" id="book-screen" aria-label="Our story book">
+        <div class="book-heart-field" aria-hidden="true">
+          <span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span>
+          <span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span>
+          <span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span>
+          <span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span>
+          <span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span>
+          <span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span>
+        </div>
+        <header class="book-topbar">
+          <button class="back-link" data-action="home" type="button">← <span>Back to our little world</span></button>
+          <div class="book-top-title">OUR STORY <span>♡</span></div>
+          <button class="contents-toggle" id="contents-toggle" type="button" aria-expanded="false" aria-controls="contents-panel">Contents <span>☰</span></button>
+        </header>
+        <div class="book-layout">
+          <aside class="contents-panel" id="contents-panel" aria-label="Book contents">
+            <div class="contents-heading"><p class="eyebrow">A little book</p><h2>Our story</h2><p>Every page leads back to you.</p></div>
+            <div class="contents-list" id="contents-list"></div>
+            <div class="contents-footer">Made with love, for Gyanvee <span>♡</span></div>
+          </aside>
+          <div class="book-stage">
+            <div class="book-ornament ornament-top" aria-hidden="true">✧</div>
+            <article class="book-page" id="book-page" aria-live="polite"></article>
+            <div class="book-ornament ornament-bottom" aria-hidden="true">♡</div>
+            <nav class="page-controls" aria-label="Book page controls">
+              <button class="page-button" id="prev-page" type="button" aria-label="Previous page">← <span>Previous</span></button>
+              <span class="page-count" id="page-count">Page 1 of 1</span>
+              <button class="page-button page-next" id="next-page" type="button"><span>Next page</span> →</button>
+            </nav>
+            <p class="page-hint">Use the arrows or the contents list to turn the pages <span>♡</span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
