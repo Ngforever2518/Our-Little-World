@@ -1,9 +1,8 @@
 /*
  * PERSONALIZE THIS FILE
  * 1. Change the username and password below.
- * 2. Edit the book title and introduction here. The eight supplied chapters
- * live in story-data.js; the ninth chapter below is still a placeholder.
- * Long chapters automatically flow onto as many pages as needed.
+ * 2. Edit the book title and introduction here. All nine story chapters
+ * live in story-data.js. Long chapters automatically flow onto more pages.
  */
 const CONFIG = {
   username: "gyanvee",
@@ -30,14 +29,12 @@ const CONFIG = {
     { title: "Things I Adore About You", subtitle: "A list with no final page", paragraphs: ["I adore the way you are unmistakably you: your thoughtful heart, your bright spirit, and all the little things that make being around you feel easy.", "This list could fill a whole library, so let this be its first page. Add another reason whenever one finds its way into your thoughts."] },
     { title: "Dreams We Can Share", subtitle: "A few tomorrows to look forward to", paragraphs: ["The future is a collection of unwritten pages. I like thinking about the small adventures, new places, quiet days, and happy surprises waiting somewhere ahead.", "This chapter can hold the things we dream about together—big plans, tiny wishes, and everything in between."] },
     { title: "My Promise to You", subtitle: "A gentle promise, from my heart", paragraphs: ["I promise to keep showing up with honesty, patience, and care. I promise to listen, to cheer for you, and to remember that the little ways we love each other matter every day.", "Most of all, I promise to keep choosing kindness and to keep making space for the things that make you feel loved."] },
-    { title: "To Be Continued…", subtitle: "The loveliest pages are still ahead", paragraphs: ["This is not an ending. It is a bookmark in a story still unfolding, with new memories waiting to become our favorites.", "Whenever we turn another page, I hope we find more laughter, more little adventures, and more reasons to be grateful that our paths crossed.", "Until the next chapter, remember this: you are loved, you are treasured, and you make my world a more beautiful place. ♡"] }
   ],
   wordsPerPage: 165
 };
 
-// The eight chapters provided for this book replace the first eight examples.
-// The ninth chapter remains as a placeholder until its text is ready.
-CONFIG.chapters = [...window.STORY_CHAPTERS, CONFIG.chapters[8]];
+// The chapters for this book live in story-data.js.
+CONFIG.chapters = window.STORY_CHAPTERS;
 
 const screens = {
   login: document.querySelector("#login-screen"),
